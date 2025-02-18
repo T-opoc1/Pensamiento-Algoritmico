@@ -1,0 +1,32 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main(){
+    int a,b;
+    char operacion;
+    
+    cout << "ingrese el primer numero: ";
+    cin >> a;
+    cout << "ingrese el segundo numero :";
+    cin >> b;
+    cout << "ingrese la operacion(+ - * / )  :";
+    cin >> operacion;
+    
+    if (operacion == '+') {
+        cout << "Resultado: " << a + b << endl;
+    }
+    else if (operacion == '-'){
+        cout << "resultado: " << a - b << endl;
+        }
+        else if (operacion == '*'){
+            cout << "resultado: " << a * b << endl;
+        }
+        else if (operacion == '/' ){
+            cout << "resultados: " << a / b << endl;
+        }
+    
+    
+    
+}
