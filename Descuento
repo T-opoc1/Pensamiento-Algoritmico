@@ -1,0 +1,11 @@
+# include <iostream>
+using namespace std;
+
+int main(){
+    float a;
+    
+    cout << "ingrese el precio completo: " << endl;
+    cin >> a;
+    cout <<  "precio con descuento: " << a * 0,15 << endl;
+    return 0;
+}
