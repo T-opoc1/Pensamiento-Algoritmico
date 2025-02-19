@@ -1,0 +1,2 @@
+a = float(input("ingrese el precio completo: "))  
+print("precio con 15% de descuento: ", a * 0.85)
