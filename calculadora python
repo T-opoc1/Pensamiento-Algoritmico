@@ -1,0 +1,13 @@
+a,b,c = input("ingrese la operacion (+,-,/,*): ").split()
+a,b = float(a), float(b)
+c = c.strip()
+if c == '+':
+  print (a + b)
+elif c == '-':
+    print (a - b)
+elif c == '*':
+      print (a * b)
+elif c == '/':
+      print (a / b)
+else:
+      print ("operacion non valida")
