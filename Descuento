@@ -6,6 +6,6 @@ int main(){
     
     cout << "ingrese el precio completo: " << endl;
     cin >> a;
-    cout <<  "precio con descuento: " << a * 0,15 << endl;
+    cout <<  "precio con descuento: " << a * 0,85 << endl;
     return 0;
 }
