@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double V, I, R; // declarar variables para potencial cristalino, flujo energetico y resistencia cosmica 
+
+    // pedir al usuario que ingrese cada valor 
+    cout << "Introduce el Potencial Cristalino (V) [-1 si desconocido]: ";
+    cin >> V;
+    cout << "Introduce el Flujo Energetico (I) [-1 si desconocido]: ";
+    cin >> I;
+    cout << "Introduce la Resistencia Cosmica (R) [-1 si desconocido]: ";
+    cin >> R;
+
+    // verifiacion para saber que variable es desconocida
+    if (V == -1) {
+        V = I * R; // si el potencial el desconocido
+        cout << "Potencial: " << V << " V" << endl; // Se muestra el resultado calculado
+    } else if (I == -1) { 
+        I = V / R; 
+        cout << "Flujo: " << I << " A" << endl; 
+    } else if (R == -1) { 
+        R = V / I; 
+        cout << "Resistencia: " << R << " Ω" << endl;
+    } else {
+        // si no hay una magnitud desconocida imprimr esto
+        cout << "No hay ninguna magnitud desconocida para calcular." << endl;
+    }
+
+    
+}
