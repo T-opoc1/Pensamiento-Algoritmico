@@ -1,0 +1,18 @@
+def calcular_magnitud(v, i, r):   #Definimos la función, con su respectivo nombre.
+    if v == -1:   #Se comprueba si es desconocido
+        potencial_cristalino = i * r #Procedimiento para calcular el poder cristalino
+        print("El Potencial Cristalino es:", potencial_cristalino, "V")  #Esto imprime los reusltados de calcular el potencial cristalino
+    elif i == -1: #Comprobamos si el flujo energetico es -1, osea desconocida
+        flujo_energetico = v / r #Procedimiento para calcular el flujo energico
+        print("El Flujo Energetico es:", flujo_energetico, "A") #Esto imprime los resultados de calcular el flujo energetico
+    elif r == -1: #Comprobamos si la resistencia cosmica es -1, osea desconocida
+        resistencia_cosmica = v / i #Se calcula la resistencia cosmica
+        print("La Resistencia Cosmica es:", resistencia_cosmica, "Ω") #Imprime los resultados de calcular la resistencia cosmica
+    else:
+        print("Todos los valores están definidos, no hay nada que calcular.") #Resultado que da por default si no se cumplen los parametros anteriores
+
+v = float(input("Ingrese el valor de Potencial Cristalino (o -1 si es desconocido): ")) #Datos que debe ingresar el usuario
+i = float(input("Ingrese el valor de Flujo Energetico (o -1 si es desconocido): "))     #
+r = float(input("Ingrese el valor de Resistencia Cósmica (o -1 si es desconocido): "))  #
+
+calcular_magnitud(v, i, r) #Imprime los resultados en pantalla
