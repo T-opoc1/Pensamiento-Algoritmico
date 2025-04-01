@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string vertices[100];
+    string caras[100];   
+    int totalVertices = 0;
+    int totalCaras = 0;
+    int opcion;
+
+    while (true) {
+        cout << " Menu ";
+        cout << "1. registrar vertice";
+        cout << "2. registradoegistrar cara";
+        cout << "3. imprimir figura";
+        cout << "4. salir";
+        cout << "seleccion una opción: ";
+        cin >> opcion;
+
+        if (opcion == 1) {
+            if (totalVertices < 100) {
+                cout << "ingrese el vertice (x, y, z) sin espacios (ejemplo: 1,2,3): ";
+                cin >> vertices[totalVertices];  
+                totalVertices++;  
+                cout << "vertice registrado.";
+            } else {
+                cout << "no se pueden registrar más vertices";
+            }
+        }
+        else if (opcion == 2) {
+            if (totalCaras < 100) {
+                cout << "ingrese los indices de los vertices de la cara (solo 1, 2 ,3): ";
+                cin >> caras[totalCaras];  
+                totalCaras++; 
+                cout << "cara registrada.";
+            } else {
+                cout << "no se pueden registrar mas caras";
+            }
+        }
+        else if (opcion == 3) {
+            cout << "vertices registrados:";
+            int i = 0;
+            while (i < totalVertices) {
+                cout << i << ": " << vertices[i] << endl;
+                i++;
+            }
+
+            cout << "caras registradas:";
+            int j = 0;
+            while (j < totalCaras) {
+                cout << j << ": " << caras[j] << endl;
+                j++;
+            }
+        }
+        else if (opcion == 4) {
+            cout << "saliendo del programa";
+            break;
+        }
+        else {
+            cout << "opción invalida Intente de nuevo";
+        }
+    }
+
+    return 0;
+}
