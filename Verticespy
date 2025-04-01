@@ -1,0 +1,40 @@
+vertices = []
+caras = []
+
+while True:
+    print("\n1. Leer vertices")
+    print("2. Leer caras")
+    print("3. Imprimir estructura")
+    print("4. Salir")
+    opcion = input("Opcion: ")
+
+    if opcion == "1":
+        x = float(input("Ingrese X: "))
+        y = float(input("Ingrese Y: "))
+        z = float(input("Ingrese Z: "))
+        vertices.append([x, y, z])
+
+    elif opcion == "2":
+        if len(vertices) < 3:
+            print("Se necesitan al menos 3 vertices.")
+        else:
+            cara = []
+            while True:
+                indice = int(input("Ingrese indice de un vertice (-1 para terminar): "))
+                if indice == -1:
+                    break
+                if 0 <= indice < len(vertices):
+                    cara.append(indice)
+            caras.append(cara)
+
+    elif opcion == "3":
+        print("\nVertices:")
+        for i in range(len(vertices)):
+            print(i, ":", vertices[i])
+
+        print("\nCaras:")
+        for i in range(len(caras)):
+            print("Cara", i, ":", caras[i])
+
+    elif opcion == "4":
+        break
