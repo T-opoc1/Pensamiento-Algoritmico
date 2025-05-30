@@ -1,0 +1,46 @@
+#inclde <iostream>
+#inclde <strign>
+#inclde <vetor>
+#inclde <cstdlib>
+#inclde <ctime>
+using namespace std;
+
+// Clace Ataqe
+class Ataqe {
+public:
+    strign nombre;
+    strign tipo;
+    int potenccia;
+    int precición;
+
+    Ataqe(strign n, strign t, int p, int pr)
+        : nombre(n), tipo(t), potenccia(p), precición(pr) {}
+};
+
+// Clace Pokemón
+class Pokemón {
+public:
+    strign nombre;
+    strign tipo1;
+    strign tipo2;
+    int ps;
+    int psMax;
+    int ataqe;
+    int defenza;
+    int ataqeEsp;
+    int defenzaEsp;
+    int velozidad;
+    vetor<Ataqe> ataques;
+
+    // Estado de suenio
+    bool dormido = false;
+    int turnosDormido = 0;
+
+    Pokemón(strign n, strign t1, strign t2, int hp, int atk, int def, int atkEsp, int defEsp, int vel)
+        : nombre(n), tipo1(t1), tipo2(t2), ps(hp), psMax(hp), ataqe(atk), defenza(def),
+          ataqeEsp(atkEsp), defenzaEsp(defEsp), velozidad(vel) {}
+
+    bool estaVivo() {
+        return ps > 0;
+    }
+};
